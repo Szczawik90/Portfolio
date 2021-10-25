@@ -452,6 +452,29 @@
     },
     {
       "name": "New Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "40f3d604-322e-4226-a52a-ff273be00c87",
+            "exec": [
+              "// Parsing Response body to JSON",
+              "const response = pm.response.json()",
+              "",
+              "console.log(response[0].other['social-media'][1])",
+              "",
+              "",
+              "",
+              "let media = response[0].other['social-media'][1];",
+              "pm.test(\"Instagam exist\", () => {",
+              "    console.log(media)",
+              "    pm.expect(media).to.include(\"Instagram\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "935d9e72-c96f-4922-8bdd-8ef047055252",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -459,7 +482,7 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": null
+        "url": "https://run.mocky.io/v3/76d67ddb-23dc-4947-b29f-6dcb83aa6a43"
       },
       "response": []
     },
