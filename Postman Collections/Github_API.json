@@ -462,6 +462,19 @@
         "url": null
       },
       "response": []
+    },
+    {
+      "name": "New Request Copy",
+      "id": "d8a2f55e-dcb5-4dde-b309-a4f41e9e3d40",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ]
 }
