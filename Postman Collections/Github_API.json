@@ -7,6 +7,24 @@
   "item": [
     {
       "name": "get users repository",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "9fe3eec7-25da-4997-8011-4e9c4b0448d1",
+            "exec": [
+              "",
+              "",
+              "pm.test(\"Cookie name check\", () => {",
+              "       pm.expect(pm.cookies.get(['_octo'])).to.eql('GH1.1.1617836449.1635164201');",
+              "});",
+              "",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "b96656f8-29d9-44de-af33-722db1e8b075",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
